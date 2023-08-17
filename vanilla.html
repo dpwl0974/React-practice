@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <span>Total clicks: 0</span>
+    <button id="btn">Click me</button>
+  </body>
+  <script>
+    let counter = 0;
+    const button = document.getElementById("btn"); //버튼 생성
+    const span = document.querySelector("span"); //span 갖고오기
+    function handelClick() {
+      counter = counter + 1; //데이터 업데이트
+      span.innerText = `Total clicks: ${counter}`; //html 업데이트
+    }
+    button.addEventListener("click", handelClick); //이벤트 실행
+  </script>
+</html>
